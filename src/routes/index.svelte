@@ -20,29 +20,12 @@ fetchPokemon();
 	<title>Pokedex</title>
 </svelte:head>
 
-    <h1>SvelteKit Pokedex</h1>
-    <input class="input" bind:value={searchTerm} placeholder="Search Pokemon">
-    <ul id="pokedex">
-        
-        {#each filteredPokemon as pokeman}
-                <PokemanCard pokeman={pokeman}/>
-        {/each}
-    </ul>
+<h1 class="text-4xl text-center my-8 uppercase">SvelteKit Pokedex</h1>
+<input class="w-full rounded-md text-lg p-4 border-2 border-gray-200" bind:value={searchTerm} placeholder="Search Pokemon">
+<div class="py-4 grid gap-4 md:grid-cols-2 grid-cols-1">
     
-<style>
-
-#pokedex {
-    padding-inline-start: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 20px;
-}
-
-.input {
-    width: 200px;
-    border: 2px solid #f4f4f4;
-    padding: 20px;
-    border-radius: 10px;
-    font-size: 16px;
-}
-</style>
+    {#each filteredPokemon as pokeman}
+            <PokemanCard pokeman={pokeman}/>
+    {/each}
+</div>
+    

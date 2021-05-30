@@ -14,9 +14,9 @@
 	<title>Pokedex - {pokeman.name}</title>
 </svelte:head>
 
-<div class="details-container">
+<div class="flex flex-col items-center">
 
-    <h1>{pokeman.name}</h1>
+    <h1 class="text-4xl text-center my-8 uppercase">{pokeman.name}</h1>
     <p>Type: <strong>{type}</strong> | Height: <strong>{pokeman.height}</strong>
         | Weight: <strong>{pokeman.weight}</strong>
     </p>
@@ -24,11 +24,3 @@
     alt={pokeman.name}
     />
 </div>
-
-<style>
-    .details-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-</style>
