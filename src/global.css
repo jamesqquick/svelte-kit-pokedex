@@ -1,0 +1,17 @@
+body {
+	font-family: sans-serif;
+}
+h1 {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 54px;
+}
+.container {
+	padding: 40px;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}

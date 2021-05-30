@@ -20,6 +20,7 @@ export const fetchPokemon = async () => {
 };
 
 export const getPokemonById = async (id) => {
+	//TODO: optimize to not require the same pokemon twice. Cache it
 	try {
 		const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
 		const res = await fetch(url);
