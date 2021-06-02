@@ -6,7 +6,7 @@ let loaded = false;
 
 export const fetchPokemon = async () => {
 	if (loaded) return;
-	const url = `https://pokeapi.co/api/v2/pokemon?limit=150`;
+	const url = `https://pokeapi.co/api/v2/pokemon?limit=151`;
 	const res = await fetch(url);
 	const data = await res.json();
 	const loadedPokemon = data.results.map((data, index) => ({
